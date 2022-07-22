@@ -1,5 +1,8 @@
 <template>
-  <Tutorial/>
+  <div>
+    <Es2022 />
+    <Es2021 />
+  </div>
 </template>
 
 <script>

@@ -4618,6 +4618,11 @@
   "resolved" "https://registry.npmjs.org/hex-color-regex/-/hex-color-regex-1.1.0.tgz"
   "version" "1.1.0"
 
+"highlight.js@^11.5.1":
+  "integrity" "sha512-ig1eqDzJaB0pqEvlPVIpSSyMaO92bH1N2rJpLMN/nX396wTpDA4Eq0uK+7I/2XG17pFaaKE0kjV/XPeGt7Evjw=="
+  "resolved" "https://registry.npmjs.org/highlight.js/-/highlight.js-11.6.0.tgz"
+  "version" "11.6.0"
+
 "hmac-drbg@^1.0.1":
   "integrity" "sha512-Tti3gMqLdZfhOQY1Mzf/AanLiqh1WTiJgEj26ZuYQ9fbkLomzGchCws4FyrSd4VkpBfiNhaE1On+lOz894jvXg=="
   "resolved" "https://registry.npmjs.org/hmac-drbg/-/hmac-drbg-1.0.1.tgz"
@@ -6054,6 +6059,13 @@
   "integrity" "sha512-Y1wZESM7VUThYY+4W+X4ySH2maqcA+p7UR+w8VWNWVAd6lwuXXWz/w/Cz43J/dI2I+PS6wD5N+bJUF+gjWvIqg=="
   "resolved" "https://registry.npmjs.org/num2fraction/-/num2fraction-1.2.2.tgz"
   "version" "1.2.2"
+
+"nuxt-highlightjs@^1.0.2":
+  "integrity" "sha512-GBSJQKYsDaTf2eoj/JaF3SSqSP0pyd0oFB/ePAJJ3zkmKrmIKh5mAUycZZraWZuzSdx/VZlgtlAT7yBDcZ+QpQ=="
+  "resolved" "https://registry.npmjs.org/nuxt-highlightjs/-/nuxt-highlightjs-1.0.2.tgz"
+  "version" "1.0.2"
+  dependencies:
+    "highlight.js" "^11.5.1"
 
 "nuxt@^2.15.8":
   "integrity" "sha512-ceK3qLg/Baj7J8mK9bIxqw9AavrF+LXqwYEreBdY/a4Sj8YV4mIvhqea/6E7VTCNNGvKT2sJ/TTJjtfQ597lTA=="
