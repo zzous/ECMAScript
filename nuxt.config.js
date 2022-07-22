@@ -1,4 +1,9 @@
 export default {
+  // gh-pages
+  target: 'static',
+  router: {
+    base: '/ECMAScript/'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'ECMAScript',
