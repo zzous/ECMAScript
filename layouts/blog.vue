@@ -10,6 +10,7 @@
 </template>
 <script>
 export default {
+  name: 'LayoutBlog',
   data () {
     return {
       activeTopButton: false

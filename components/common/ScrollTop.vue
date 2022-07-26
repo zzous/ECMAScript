@@ -1,16 +1,11 @@
 <template>
-  <div id="container">
-    <Category />
-    <Nav />
-    <Nuxt />
-    <button class="scrollTop" :class="{active: activeTopButton}" @click="scrollTop()">
-      TOP
-    </button>
-  </div>
+  <button class="scrollTop" :class="{active: activeTopButton}" @click="scrollTop()">
+    TOP
+  </button>
 </template>
 <script>
 export default {
-  name: 'LayoutDefault',
+  name: 'SCROLLTOP',
   data () {
     return {
       activeTopButton: false

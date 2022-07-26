@@ -12,6 +12,9 @@
             vuex
           </nuxt-link>
         </li>
+        <li>
+          <a href="https://www.naver.com/index.html">https://www.naver.com/index.html</a>
+        </li>
       </ul>
     </div>
   </div>

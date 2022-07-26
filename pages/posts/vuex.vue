@@ -7,6 +7,6 @@
 <script>
 export default {
   name: 'VUEX',
-  layout: 'blog'
+  layout: 'LayoutBlog'
 }
 </script>
