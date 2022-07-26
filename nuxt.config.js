@@ -57,5 +57,12 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  vue: {
+    html: {
+      // all loader queries can be specified here
+      // also, you can specify options for htmlMinifier here.
+    }
   }
 }
