@@ -3,6 +3,9 @@ a:hover { text-decoration: underline; }
 
 #container { width: calc(100% - 150px); padding: 20px; font-size: 14px; }
 
+#category { position: fixed; top: 0; right: 0; max-width: 200px; z-index: 100; }
+#category .inner { padding: 20px; text-align: right; }
+
 #navigation { position: fixed; top: 0; right: 0; max-width: 200px; height: 100%; background: rgba(255, 255, 255, 0.5); }
 #navigation .inner { display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: right; opacity: .7; transition-duration: .2s; }
 #navigation .inner:hover { padding-right: 25px; opacity: 1; }

@@ -1,7 +1,7 @@
 <template>
   <div id="container">
+    <!-- <Nav /> -->
     <Category />
-    <Nav />
     <Nuxt />
     <button class="scrollTop" :class="{active: activeTopButton}" @click="scrollTop()">
       TOP
