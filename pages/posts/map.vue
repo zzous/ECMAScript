@@ -1,6 +1,79 @@
 <template>
   <div>
-    <h1>Map / Reduce</h1>
+    <h1># Map / Reduce / Filter</h1>
+    <p>
+      <nuxt-link to="/#ES2015">
+        ES6 (ES2015)
+      </nuxt-link> 에 추가된 methods
+    </p>
+    <h2>Filter</h2>
+    <p>주어진 함수의 조건을 만족하는 모든 요소를 새로운 배열로 반환</p>
+    <pre>
+      <code v-highlight class="javascript">const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+const result = words.filter(word => word.length > 6);
+console.log(result);
+// expected output: Array ["exuberant", "destruction", "present"]</code>
+    </pre>
+
+    <p>구문</p>
+    <pre>
+      <code v-highlight class="javascript">arr.filter(callback(element[, index[, array]])[, thisArg])</code>
+    </pre>
+    <p>callback (내부 함수) : 해당 함수의 return 값이 true / false 의 값만 갖는다 ( map() 의 내부 함수에서는 여러 타입의 return 값을 갖는다 )</p>
+    <p class="indent">
+      <span class="box">element</span> value
+    </p>
+    <p class="indent">
+      <span class="box">index</span>
+    </p>
+    <p class="indent">
+      <span class="box">thisArg</span> 원본 배열
+    </p>
+    <pre>
+      <code v-highlight class="javascript">const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+const result = words.filter((word, index, thisArg) => {
+  console.log('word : ', element, 'index : ', index, thisArg);
+  return element.length > 6;
+})</code>
+    </pre>
+    <p>return 값이 모두 false 이면 [] 빈 배열을 반환</p>
+    <h3>Polyfill</h3>
+    <pre>
+      <code v-highlight class="javacript">if (!Array.prototype.filter) {
+  Array.prototype.filter = function (func, thisArg) {
+    'use strict';
+    if ( !((typeof func === 'Function' || typeof func === 'function') && this) )
+        throw new TypeError();
+
+    var len = this.length >>> 0,
+        res = new Array(len), // preallocate array
+        t = this, c = 0, i = -1;
+    if (thisArg === undefined) {
+      while (++i !== len) {
+        // checks to see if the key was set
+        if (i in this) {
+          if (func(t[i], i, t)) {
+            res[c++] = t[i];
+          }
+        }
+      }
+    } else {
+      while (++i !== len) {
+        // checks to see if the key was set
+        if (i in this) {
+          if (func.call(thisArg, t[i], i, t)) {
+            res[c++] = t[i];
+          }
+        }
+      }
+    }
+
+    res.length = c; // shrink down array to proper size
+    return res;
+  };
+}</code>
+    </pre>
+    <p>[Code] <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter#%ED%8F%B4%EB%A6%AC%ED%95%84" target="_blank">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter#%ED%8F%B4%EB%A6%AC%ED%95%84</a></p>
   </div>
 </template>
 

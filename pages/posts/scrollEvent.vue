@@ -37,6 +37,7 @@ export default {
 
 <script>
 export default {
-  name: 'SCROLLEVENT'
+  name: 'SCROLLEVENT',
+  layout: 'blog'
 }
 </script>
