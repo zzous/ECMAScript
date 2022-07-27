@@ -1,9 +1,12 @@
 <template>
-  <button class="scrollTop" :class="{active: activeTopButton}" @click="scrollTop()">
-    TOP
-  </button>
-</template>
-<script>
+  <div>
+    <pre>
+      <code v-highlight class="vue">// template
+&lt;button class="scrollTop" :class="{active: activeTopButton}" @click="scrollTop()"&gt;
+  TOP
+&lt;/button&gt;
+
+// script
 export default {
   name: 'SCROLLTOP',
   data () {
@@ -27,5 +30,13 @@ export default {
       this.activeTopButton = scrY > 20
     }
   }
+}</code>
+    </pre>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'SCROLLEVENT'
 }
 </script>

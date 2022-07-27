@@ -12,6 +12,21 @@
             vuex
           </nuxt-link>
         </li>
+        <li>
+          <nuxt-link to="/posts/dataTypes">
+            Data Types
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/posts/map">
+            Map / Reduce / Filter
+          </nuxt-link>
+        </li>
+        <li>
+          <nuxt-link to="/posts/scrollEvent">
+            scrollEvent
+          </nuxt-link>
+        </li>
       </ul>
     </div>
   </div>
