@@ -1,5 +1,6 @@
 <template>
   <div id="container">
+    <CommonProgressBar />
     <!-- <Nav /> -->
     <Category />
     <Nuxt />

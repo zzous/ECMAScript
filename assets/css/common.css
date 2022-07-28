@@ -14,6 +14,9 @@ p + p { margin-top: 3px; }
   #container { width: 100%; }
 }
 
+#progressBar { position: fixed; top: 0; left: 0; width: 100%; height: 2px; background: #ececec; z-index: 101; }
+#progressBar .gauge { display: inline-block; position: absolute; top: 0; left: 0; height: 2px; background: #337ab7; transition-duration: .3s; }
+
 #category { position: fixed; top: 0; right: 0; max-width: 200px; z-index: 100; }
 #category .inner { padding: 20px; text-align: right; }
 
