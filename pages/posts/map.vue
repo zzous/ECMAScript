@@ -6,7 +6,36 @@
         ES6 (ES2015)
       </nuxt-link> 에 추가된 methods
     </p>
-    <h2>Filter</h2>
+    <h2>Array.prototype.map()</h2>
+    <p>배열 내의 모든 요소들에 대해 주어진 함수의 결과값 들을 배열로 반환</p>
+    <pre>
+      <code v-highlight class="javascript">const _array = [1, 2, 3, 4, 5];
+
+const _map = _array.map(item => item * 2);
+
+console.log(_map); // [2, 4, 6, 8, 10]</code>
+    </pre>
+
+    <p>구문</p>
+    <pre>
+      <code v-highlight class="javascript">arr.map(callback(currentValue[, index[, array]])[, thisArg])</code>
+    </pre>
+    <p>callback</p>
+    <p class="indent">
+      <span class="box">currentValue</span> value
+    </p>
+    <p class="indent">
+      <span class="box">index (Optional)</span> index
+    </p>
+    <p class="indent">
+      <span class="box">array (Optional)</span> map()을 호출한 배열
+    </p>
+    <p class="indent">
+      <span class="box">thisArg (Optional)</span> callback을 실행할 때 this로 사용되는 값.
+    </p>
+    <p>[참조] <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map" target="_blank">https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map</a></p>
+
+    <h2>Array.prototype.filter()</h2>
     <p>주어진 함수의 조건을 만족하는 모든 요소를 새로운 배열로 반환</p>
     <pre>
       <code v-highlight class="javascript">const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
