@@ -24,7 +24,13 @@ export default {
       if (isActive) { window.scrollTo({ top: 0, behavior: 'smooth' }) }
     },
     handleScroll () {
-      this.scrollH = window.scrollY
+      const scrT = window.scrollY // window.pageYOffset || document.documentElement.scrollTop
+      if (scrT > this.scrollH) {
+        console.log('down scroll')
+      } else {
+        console.log('up scroll')
+      }
+      this.scrollH = scrT
       this.activeTopButton = this.scrollH > 20
       this.$nuxt.$emit('windowScrollH', this.scrollH)
     }

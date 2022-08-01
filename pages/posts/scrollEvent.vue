@@ -11,7 +11,8 @@ export default {
   name: 'SCROLLTOP',
   data () {
     return {
-      activeTopButton: false
+      activeTopButton: false,
+      scrollH: 0
     }
   },
   beforeMount () {
@@ -26,8 +27,16 @@ export default {
       if (isActive) { window.scrollTo({ top: 0, behavior: 'smooth' }) }
     },
     handleScroll () {
-      const scrY = window.scrollY
-      this.activeTopButton = scrY > 20
+      const scrT = window.scrollY // window.pageYOffset || document.documentElement.scrollTop
+      if (scrT > this.scrollH) {
+        console.log('down scroll')
+      } else {
+        console.log('up scroll')
+      }
+
+      this.scrollH = scrT;
+
+      this.activeTopButton = scrT > 20
     }
   }
 }</code>
