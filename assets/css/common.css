@@ -2,9 +2,9 @@
 a { color: #337ab7; }
 a:hover { text-decoration: underline; }
 
-h1 { margin-top: 20px; font-size: 24px; color: #000; }
-h2 { margin-top: 10px; font-size: 18px; color: #000; }
-h3 { margin-top: 10px; font-size: 16px; color: #000; }
+h1 { margin: 20px 0 10px; font-size: 24px; color: #000; }
+h2 { margin: 10px 0 10px; font-size: 18px; color: #000; }
+h3 { margin: 10px 0 10px; font-size: 16px; color: #000; }
 
 p + p { margin-top: 3px; }
 
@@ -19,6 +19,7 @@ p + p { margin-top: 3px; }
 
 #category { position: fixed; top: 0; right: 0; max-width: 200px; z-index: 100; }
 #category .inner { padding: 20px; text-align: right; }
+#category .inner .subList a { color: #666; cursor: pointer; }
 
 #navigation { position: fixed; top: 0; right: 0; max-width: 200px; height: 100%; background: rgba(255, 255, 255, 0.5); }
 #navigation .inner { display: flex; align-items: center; justify-content: center; height: 100%; padding: 20px; text-align: right; opacity: .7; transition-duration: .2s; }

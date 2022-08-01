@@ -21,6 +21,11 @@
           <nuxt-link to="/posts/map">
             Map / Reduce / Filter
           </nuxt-link>
+          <ul v-if="$route.path === '/posts/map'" class="subList">
+            <li><a class="link" @click="scrollMove('map')">map</a></li>
+            <li><a class="link" @click="scrollMove('reduce')">reduce</a></li>
+            <li><a class="link" @click="scrollMove('filter')">filter</a></li>
+          </ul>
         </li>
         <li>
           <nuxt-link to="/posts/scrollEvent">
@@ -34,6 +39,12 @@
 
 <script>
 export default {
-  name: 'CATEGORY'
+  name: 'CATEGORY',
+  methods: {
+    scrollMove (target) {
+      const _target = document.getElementById(target)
+      window.scrollTo({ top: _target.offsetTop, behavior: 'smooth' })
+    }
+  }
 }
 </script>
