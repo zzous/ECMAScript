@@ -31,6 +31,11 @@
           <nuxt-link to="/posts/scrollEvent">
             scrollEvent
           </nuxt-link>
+          <ul>
+            <li style="padding-left: 10px; background: rgba(255, 255, 255, 0.7); border-radius: 3px;">
+              scrollH(eventBus) : {{ winScrollH }}
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
@@ -40,10 +45,28 @@
 <script>
 export default {
   name: 'CATEGORY',
+  data () {
+    return {
+      winScrollH: 0
+    }
+  },
+  mounted () {
+    this.$nuxt.$on('windowScrollH', this.getWinScrollH)
+  },
+  beforeDestroy () {
+    this.$nuxt.$off('windowScrollH', this.getWinScrollH)
+  },
+  // destroyed () {
+  //   window.$eventBus.$off('windowScrollH', this.getWinScrollH)
+  // },
   methods: {
     scrollMove (target) {
       const _target = document.getElementById(target)
       window.scrollTo({ top: _target.offsetTop, behavior: 'smooth' })
+    },
+    getWinScrollH (val) {
+      // console.log('eventBus', val)
+      this.winScrollH = val
     }
   }
 }

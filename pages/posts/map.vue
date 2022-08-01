@@ -1,5 +1,6 @@
 <template>
   <div>
+    <CommonScrollTop />
     <h1># Map / Reduce / Filter</h1>
     <p>
       <nuxt-link to="/#ES2015">

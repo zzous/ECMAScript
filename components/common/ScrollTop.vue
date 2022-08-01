@@ -8,7 +8,8 @@ export default {
   name: 'SCROLLTOP',
   data () {
     return {
-      activeTopButton: false
+      activeTopButton: false,
+      scrollH: 0
     }
   },
   beforeMount () {
@@ -23,8 +24,9 @@ export default {
       if (isActive) { window.scrollTo({ top: 0, behavior: 'smooth' }) }
     },
     handleScroll () {
-      const scrY = window.scrollY
-      this.activeTopButton = scrY > 20
+      this.scrollH = window.scrollY
+      this.activeTopButton = this.scrollH > 20
+      this.$nuxt.$emit('windowScrollH', this.scrollH)
     }
   }
 }
