@@ -57,8 +57,7 @@ console.log(result); // [2, 4, 6, 8, 10]</code>
   { name: 'natasha', gender: 'female', age: '35' }
 ]
 const _name = _arr.map(item => item.name);
-console.log(_name) // ['tomas', 'cyndi', 'louis', 'natasha']
-      </code>
+console.log(_name) // ['tomas', 'cyndi', 'louis', 'natasha']</code>
     </pre>
 
     <p>Object.entries() 를 이용한 object 순회</p>
@@ -170,8 +169,7 @@ console.log(gender)
 //     {name: 'cyndi', gender: 'female', age: 22},
 //     {name: 'natasha', gender: 'female', age: 35}
 //   ]
-// }
-</code>
+// } </code>
     </pre>
 
     <h2 id="filter">

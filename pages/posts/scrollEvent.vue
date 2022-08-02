@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h2>scroll / wheel ( event )</h2>
     <pre>
       <code v-highlight class="vue">// template
 &lt;button class="scrollTop" :class="{active: activeTopButton}" @click="scrollTop()"&gt;
@@ -12,14 +13,17 @@ export default {
   data () {
     return {
       activeTopButton: false,
-      scrollH: 0
+      scrollH: 0,
+      scrollDirection: null
     }
   },
   beforeMount () {
     window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('wheel', this.handleWheel)
   },
   beforeDestroy () {
     window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('wheel', this.handleWheel)
   },
   methods: {
     scrollTop () {
@@ -37,6 +41,10 @@ export default {
       this.scrollH = scrT;
 
       this.activeTopButton = scrT > 20
+    },
+    handleWheel () {
+      this.scrollDirection = event.deltaY > 0 ? 'up' : 'down'
+      console.log('wheel', event.deltaY, this.scrollDirection)
     }
   }
 }</code>
