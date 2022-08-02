@@ -15,11 +15,11 @@ export default {
   },
   beforeMount () {
     window.addEventListener('scroll', this.handleScroll)
-    window.addEventListener('wheel', this.wheelScroll)
+    window.addEventListener('wheel', this.handleWheel)
   },
   beforeDestroy () {
     window.removeEventListener('scroll', this.handleScroll)
-    window.removeEventListener('wheel', this.wheelScroll)
+    window.removeEventListener('wheel', this.handleWheel)
   },
   methods: {
     scrollTop () {
@@ -37,7 +37,7 @@ export default {
       this.activeTopButton = this.scrollH > 20
       this.$nuxt.$emit('windowScrollH', this.scrollH)
     },
-    wheelScroll () {
+    handleWheel () {
       this.scrollDirection = event.deltaY > 0 ? 'up' : 'down'
       console.log('wheel', event.deltaY, this.scrollDirection)
     }
