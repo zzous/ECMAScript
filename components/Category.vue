@@ -37,6 +37,11 @@
             </li>
           </ul>
         </li>
+        <li>
+          <nuxt-link to="/posts/highlightTag">
+            tag highlight
+          </nuxt-link>
+        </li>
       </ul>
     </div>
   </div>
