@@ -13,5 +13,5 @@
 <script>
 export default {
   name: 'ES2017'
-}
+};
 </script>

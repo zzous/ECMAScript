@@ -15,5 +15,5 @@
 <script>
 export default {
   name: 'ES2018'
-}
+};
 </script>

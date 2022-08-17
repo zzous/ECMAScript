@@ -42,6 +42,11 @@
             tag highlight
           </nuxt-link>
         </li>
+        <li>
+          <nuxt-link to="/posts/searchTest">
+            searchTest
+          </nuxt-link>
+        </li>
       </ul>
     </div>
   </div>
@@ -53,26 +58,26 @@ export default {
   data () {
     return {
       winScrollH: 0
-    }
+    };
   },
   mounted () {
-    this.$nuxt.$on('windowScrollH', this.getWinScrollH)
+    this.$nuxt.$on('windowScrollH', this.getWinScrollH);
   },
   beforeDestroy () {
-    this.$nuxt.$off('windowScrollH', this.getWinScrollH)
+    this.$nuxt.$off('windowScrollH', this.getWinScrollH);
   },
   // destroyed () {
   //   window.$eventBus.$off('windowScrollH', this.getWinScrollH)
   // },
   methods: {
     scrollMove (target) {
-      const _target = document.getElementById(target)
-      window.scrollTo({ top: _target.offsetTop, behavior: 'smooth' })
+      const _target = document.getElementById(target);
+      window.scrollTo({ top: _target.offsetTop, behavior: 'smooth' });
     },
     getWinScrollH (val) {
       // console.log('eventBus', val)
-      this.winScrollH = val
+      this.winScrollH = val;
     }
   }
-}
+};
 </script>

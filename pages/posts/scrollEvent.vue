@@ -93,5 +93,5 @@ methods: {
 export default {
   name: 'SCROLLEVENT',
   layout: 'blog'
-}
+};
 </script>

@@ -8,5 +8,5 @@
 export default {
   name: 'VUEX',
   layout: 'blog'
-}
+};
 </script>

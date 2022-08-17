@@ -56,5 +56,5 @@ console.log(greeting.trim());
 <script>
 export default {
   name: 'ES2019'
-}
+};
 </script>

@@ -84,5 +84,5 @@ button.#value = false;</code>
 <script>
 export default {
   name: 'ES2022'
-}
+};
 </script>

@@ -11,36 +11,36 @@ export default {
       activeTopButton: false,
       scrollH: 0,
       scrollDirection: null
-    }
+    };
   },
   beforeMount () {
-    window.addEventListener('scroll', this.handleScroll)
-    window.addEventListener('wheel', this.handleWheel)
+    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('wheel', this.handleWheel);
   },
   beforeDestroy () {
-    window.removeEventListener('scroll', this.handleScroll)
-    window.removeEventListener('wheel', this.handleWheel)
+    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('wheel', this.handleWheel);
   },
   methods: {
     scrollTop () {
-      const isActive = event.target.className.includes('active')
-      if (isActive) { window.scrollTo({ top: 0, behavior: 'smooth' }) }
+      const isActive = event.target.className.includes('active');
+      if (isActive) { window.scrollTo({ top: 0, behavior: 'smooth' }); }
     },
     handleScroll () {
-      const scrT = window.scrollY // window.pageYOffset || document.documentElement.scrollTop
+      const scrT = window.scrollY; // window.pageYOffset || document.documentElement.scrollTop
       if (scrT > this.scrollH) {
-        console.log('down scroll')
+        // console.log('down scroll');
       } else {
-        console.log('up scroll')
+        // console.log('up scroll');
       }
-      this.scrollH = scrT
-      this.activeTopButton = this.scrollH > 20
-      this.$nuxt.$emit('windowScrollH', this.scrollH)
+      this.scrollH = scrT;
+      this.activeTopButton = this.scrollH > 20;
+      this.$nuxt.$emit('windowScrollH', this.scrollH);
     },
     handleWheel () {
-      this.scrollDirection = event.deltaY > 0 ? 'up' : 'down'
-      console.log('wheel', event.deltaY, this.scrollDirection)
+      this.scrollDirection = event.deltaY > 0 ? 'up' : 'down';
+      // console.log('wheel', event.deltaY, this.scrollDirection);
     }
   }
-}
+};
 </script>

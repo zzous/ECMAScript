@@ -10,23 +10,23 @@ export default {
   data () {
     return {
       gauge: 0
-    }
+    };
   },
   beforeMount () {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll);
   },
   beforeDestroy () {
-    window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
     handleScroll () {
-      const winHeight = window.innerHeight
-      const conHeight = document.querySelector('body').offsetHeight
-      const scollY = window.scrollY
+      const winHeight = window.innerHeight;
+      const conHeight = document.querySelector('body').offsetHeight;
+      const scollY = window.scrollY;
       // console.log('# conHeight', conHeight, '# winHeight', winHeight, '# scrollY', scollY, '# cal', (scollY / (conHeight - winHeight)) * 100)
-      this.gauge = (scollY / (conHeight - winHeight)) * 100
+      this.gauge = (scollY / (conHeight - winHeight)) * 100;
     }
   }
 
-}
+};
 </script>

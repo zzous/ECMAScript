@@ -96,5 +96,5 @@ console.log(foo) // bar (No assignment because foo is not nullish)</code>
 <script>
 export default {
   name: 'ES2021'
-}
+};
 </script>

@@ -249,5 +249,5 @@ const result = words.filter((word, index, thisArg) => {
 export default {
   name: 'MAP',
   layout: 'blog'
-}
+};
 </script>

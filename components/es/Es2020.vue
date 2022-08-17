@@ -81,5 +81,5 @@ console.log(baz);
 <script>
 export default {
   name: 'ES2020'
-}
+};
 </script>

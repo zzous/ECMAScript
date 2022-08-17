@@ -19,9 +19,9 @@ export default {
   name: 'SideMenu',
   methods: {
     scrollMove (target) {
-      const _target = document.getElementById(target)
-      window.scrollTo({ top: _target.offsetTop, behavior: 'smooth' })
+      const _target = document.getElementById(target);
+      window.scrollTo({ top: _target.offsetTop, behavior: 'smooth' });
     }
   }
-}
+};
 </script>
