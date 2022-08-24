@@ -17,7 +17,7 @@
         </template>
       </div>
       <!-- 반씩 차는 버튼 -->
-      <div class="btn" style="margin-top: 30px;">
+      <div class="btn" style="margin-top: 45px;">
         <template v-for="idx in 5">
           <button :key="idx" @click="setCounterHalfRating(idx)">
             {{ idx - 1 }}.5
@@ -43,6 +43,14 @@
   &lt;div class="btn">
     &lt;template v-for="idx in 5">
       &lt;button :key="idx" @click="setCounterRating(idx)" />
+    &lt;/template>
+  &lt;/div>
+  <!-- 반씩 차는 버튼 -->
+  &lt;div class="btn" style="margin-top: 45px;">
+    &lt;template v-for="idx in 5">
+      &lt;button :key="idx" @click="setCounterHalfRating(idx)">
+              <!-- {{ idx - 1 }}.5 -->
+      &lt;/button>
     &lt;/template>
   &lt;/div>
 &lt;/div>
@@ -78,6 +86,15 @@ export default {
     setCounterRating (idx) {
       console.log('index', idx);
       this.ratingCounter = idx * 2;
+    },
+    setCounterHalfRating (idx) {
+      if ((idx * 2) === this.ratingCounter) {
+        this.ratingCounter = this.ratingCounter - 1;
+      } else if (((idx - 1) * 2) &lt; this.ratingCounter && (idx * 2) > this.ratingCounter) {
+        this.ratingCounter = this.ratingCounter + 1;
+      } else {
+        this.ratingCounter = idx * 2;
+      }
     }
   }
 };
@@ -116,7 +133,6 @@ export default {
       this.ratingCounter = idx * 2;
     },
     setCounterHalfRating (idx) {
-      console.log(idx * 2, this.ratingCounter);
       if ((idx * 2) === this.ratingCounter) {
         this.ratingCounter = this.ratingCounter - 1;
       } else if (((idx - 1) * 2) < this.ratingCounter && (idx * 2) > this.ratingCounter) {
