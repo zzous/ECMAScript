@@ -47,6 +47,11 @@
             searchTest
           </nuxt-link>
         </li>
+        <li>
+          <nuxt-link to="/posts/ratingExample">
+            ratingExample
+          </nuxt-link>
+        </li>
       </ul>
     </div>
   </div>
