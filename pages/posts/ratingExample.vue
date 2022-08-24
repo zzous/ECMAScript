@@ -11,13 +11,23 @@
       </div>
       <div class="btn">
         <template v-for="idx in 5">
-          <button :key="idx" @click="setCounterRating(idx)" />
+          <button :key="idx" @click="setCounterRating(idx)">
+            {{ idx }}
+          </button>
+        </template>
+      </div>
+      <!-- 반씩 차는 버튼 -->
+      <div class="btn" style="margin-top: 30px;">
+        <template v-for="idx in 5">
+          <button :key="idx" @click="setCounterHalfRating(idx)">
+            {{ idx - 1 }}.5
+          </button>
         </template>
       </div>
     </div>
-    <div style="margin-top: 50px;">
+    <div style="margin-top: 100px;">
       <button @click="autoCount">
-        + / -
+        + / - 버튼
       </button>
     </div>
 
@@ -103,8 +113,17 @@ export default {
     },
 
     setCounterRating (idx) {
-      console.log('index', idx);
       this.ratingCounter = idx * 2;
+    },
+    setCounterHalfRating (idx) {
+      console.log(idx * 2, this.ratingCounter);
+      if ((idx * 2) === this.ratingCounter) {
+        this.ratingCounter = this.ratingCounter - 1;
+      } else if (((idx - 1) * 2) < this.ratingCounter && (idx * 2) > this.ratingCounter) {
+        this.ratingCounter = this.ratingCounter + 1;
+      } else {
+        this.ratingCounter = idx * 2;
+      }
     }
   }
 };
