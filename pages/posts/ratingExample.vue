@@ -20,6 +20,59 @@
         + / -
       </button>
     </div>
+
+    <pre>
+      <code v-highlight class="vue">// template
+&lt;div class="raings">
+  &lt;div class="bg">
+    &lt;span>★&lt;/span>&lt;span>★&lt;/span>&lt;span>★&lt;/span>&lt;span>★&lt;/span>&lt;span>★&lt;/span>
+  &lt;/div>
+  &lt;div class="active" :style="`width: ${ratingCounter * 10}%`">
+    &lt;span>★&lt;/span>&lt;span>★&lt;/span>&lt;span>★&lt;/span>&lt;span>★&lt;/span>&lt;span>★&lt;/span>
+  &lt;/div>
+  &lt;div class="btn">
+    &lt;template v-for="idx in 5">
+      &lt;button :key="idx" @click="setCounterRating(idx)" />
+    &lt;/template>
+  &lt;/div>
+&lt;/div>
+&lt;div style="margin-top: 50px;">
+  &lt;button @click="autoCount">
+    + / -
+  &lt;/button>
+&lt;/div>
+
+// script
+export default {
+  data () {
+    return {
+      ratingCounter: 0,
+      countDirection: 'plus' // 'plus || minus'
+    };
+  },
+  methods: {
+    autoCount () {
+      if (this.countDirection === 'plus') {
+        this.ratingCounter++;
+        if (this.ratingCounter === 10) {
+          this.countDirection = 'minus';
+        }
+      } else {
+        this.ratingCounter--;
+        if (this.ratingCounter === 0) {
+          this.countDirection = 'plus';
+        }
+      }
+    },
+
+    setCounterRating (idx) {
+      console.log('index', idx);
+      this.ratingCounter = idx * 2;
+    }
+  }
+};
+      </code>
+    </pre>
   </div>
 </template>
 
