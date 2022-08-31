@@ -45,6 +45,12 @@ module.exports = {
     'vue/no-unused-components': ['off', {
       ignoreWhenBindingPresent: true
     }],
+    'vue/singleline-html-element-content-newline': 'off',
+    // 'vue/singleline-html-element-content-newline': ['error', {
+    //   'ignoreWhenNoAttributes': true,
+    //   'ignoreWhenEmpty': true,
+    //   'ignores': ['pre', 'textarea', ...INLINE_ELEMENTS]
+    // }],
     // # Default
     semi: ['error', 'always'],
     quotes: ['error', 'single'],
@@ -99,6 +105,7 @@ module.exports = {
     //   named: 'never',
     //   asyncArrow: 'always'
     // }],
+    'singleline-html-element-content-newline': 'off',
     'array-bracket-spacing': ['error', 'never'],
     'func-call-spacing': ['error', 'never'],
     'function-call-argument-newline': ['error', 'consistent'],
